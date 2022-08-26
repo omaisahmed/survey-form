@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+	<meta charset=UTF-8>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<title>Survey | AMZ One Step</title>
+	<link rel="shortcut icon" href="https://www.amzonestep.com/site/images/amz-fav-icon.png">
+	<link href="https://www.amzonestep.com/new/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css?ver=5.9.1">
+	<style>
+	input[type="radio"] {
+		-ms-transform: scale(1.5);
+		/* IE 9 */
+		-webkit-transform: scale(1.5);
+		/* Chrome, Safari, Opera */
+		transform: scale(1.5);
+	}
+	
+	@media only screen and (max-width: 768px) {
+		input[type="radio"] {
+			transform: scale(1.2);
+		}
+	}
+	
+	body {
+		font-family: Muli, sans-serif;
+	}
+	
+	.navbar-expand-lg {
+		justify-content: space-between !important;
+	}
+	
+	.bg-dark {
+		background-color: black !important;
+	}
+	
+	.navbar-collapse {
+		flex-grow: 0;
+	}
+	
+	.nav-link {
+		color: white !important;
+	}
+	
+	@media (min-width: 992px) {
+		.navbar-expand-lg .navbar-nav .nav-link {
+			padding-right: 1rem !important;
+			padding-left: 1rem !important;
+		}
+	}
+	
+	.targetBtns {
+		background-color: #fd7e14;
+		border: none;
+		color: white !important;
+		padding: 12px 22px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 16px;
+		cursor: pointer;
+		margin: -5px;
+		transition-duration: 0.4s;
+		font-weight: bold;
+		width: 135px;
+		border-radius: 0.25rem;
+	}
+	
+	.questionnaireBanner {
+		background-color: #071630;
+	}
+	
+	.h1 {
+		color: white;
+		font-size: 2.3rem;
+	}
+	
+	@media only screen and (max-width:768px) {
+		.h1mob {
+			font-size: 1.5rem;
+		}
+	}
+	
+	.h2 {
+		font-weight: bold;
+		letter-spacing: 0.5px;
+	}
+	
+	.h3 {
+		color: white;
+		font-size: 1.2rem;
+		letter-spacing: 0.5px;
+	}
+	
+	.text-orange {
+		color: #f5812a;
+	}
+	
+	.diagonal {
+		width: 88%;
+		height: 100%;
+		background-color: #00b4a7;
+		transform: skewX(30deg);
+		transform-origin: top;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: auto;
+	}
+	
+	.diagonal > span {
+		transform: skewX(-30deg);
+		color: white;
+		font-size: 28px;
+		font-weight: 500;
+	}
+	
+	.owl-carousel .item {
+		margin: 3px
+	}
+	
+	.owl-carousel .item img {
+		display: block;
+		width: 50%;
+		height: auto
+	}
+	
+	.owl-carousel .item {
+		margin: 3px
+	}
+	
+	.seen-on {
+		background-color: #eee;
+		border-top: 9px solid #00b4a7;
+	}
+	
+	@media only screen and (max-width: 1200px) {
+		.seen-on {
+			display: none !important;
+		}
+	}
+	
+	.para {
+		font-size: 18px;
+		letter-spacing: 0.5px;
+	}
+	
+	.page-footer {
+		background-color: black;
+	}
+	
+	.footerPara {
+		font-weight: 400 !important;
+		font-family: 'Montserrat', sans-serif;
+		font-size: 17px;
+		letter-spacing: 0.5px;
+		color: white;
+	}
+	
+	@media only screen and (max-width:768px) {
+		.footerPara {
+			font-size: 13px;
+		}
+	}
+	
+	.fixed-top {
+		position: sticky !important;
+	}
+	
+	.padding-para {
+		padding-left: 120px;
+		padding-right: 120px;
+	}
+	
+	@media only screen and (max-width:768px) {
+		.padding-para {
+			padding-left: 0px;
+			padding-right: 0px;
+		}
+	}
+	
+	.bold {
+		font-weight: bold;
+	}
+	
+	.klaviyo_default_styling .klaviyo_submit_button:after {
+		display: none;
+	}
+	
+	.form-check-input {
+		margin-top: 0.2rem;
+	}
+	
+	.klaviyo_default_styling label {
+		font-size: 22px!important;
+	}
+	</style>
+	<style>
+	#msform {
+		text-align: center;
+		position: relative;
+		margin-top: 20px;
+		max-width: 100%;
+	}
+	
+	#msform fieldset {
+		background: white;
+		border: 0 none;
+		border-radius: 0.5rem;
+		box-sizing: border-box;
+		width: 100%;
+		margin: 0;
+		padding-bottom: 20px;
+		position: relative
+	}
+	
+	.form-card {
+		text-align: left
+	}
+	
+	#msform fieldset:not(:first-of-type) {
+		display: none;
+	}
+	
+	#msform .action-button {
+		width: 100px;
+		background: #00B4A7;
+		font-weight: bold;
+		color: white;
+		border: 0 none;
+		border-radius: 0px;
+		cursor: pointer;
+		padding: 10px 5px;
+		margin: 0px 0px 10px 5px;
+		float: right;
+		height: 44px;
+	}
+	
+	#msform .action-button:hover,
+	#msform .action-button:focus {
+		background-color: #00B4A7;
+	}
+	
+	#msform .action-button-previous {
+		width: 100px;
+		background: #616161;
+		font-weight: bold;
+		color: white;
+		border: 0 none;
+		border-radius: 0px;
+		cursor: pointer;
+		padding: 10px 5px;
+		margin: 10px 5px 10px 0px;
+		/*float: right;*/
+	}
+	
+	#msform .action-button-previous:hover,
+	#msform .action-button-previous:focus {
+		background-color: #000000;
+	}
+	
+	.card {
+		z-index: 0;
+		border: none;
+		position: relative;
+	}
+	
+	.fs-title {
+		font-size: 25px;
+		color: #00B4A7;
+		margin-bottom: 15px;
+		font-weight: bold;
+		text-align: left;
+	}
+	
+	.steps {
+		font-size: 20px;
+		color: gray;
+		margin-bottom: 10px;
+		font-weight: normal;
+		text-align: right;
+	}
+	
+	#progressbar li {
+		list-style-type: none;
+		font-size: 15px;
+		width: 25%;
+		float: left;
+		position: relative;
+		font-weight: 400;
+	}
+	
+	#progressbar li:before {
+		width: 50px;
+		height: 50px;
+		line-height: 45px;
+		display: block;
+		font-size: 20px;
+		color: #ffffff;
+		background: lightgray;
+		border-radius: 50%;
+		margin: 0 auto 10px auto;
+		padding: 2px
+	}
+	
+	#progressbar li:after {
+		content: '';
+		width: 100%;
+		height: 2px;
+		background: lightgray;
+		position: absolute;
+		left: 0;
+		top: 25px;
+		z-index: -1
+	}
+	
+	#progressbar li.active:before,
+	#progressbar li.active:after {
+		background: #00B4A7;
+	}
+	
+	.progress {
+		height: 20px;
+	}
+	
+	.progress-bar {
+		background-color: #00B4A7;
+	}
+	
+	.radio-inline {
+		position: relative;
+		display: inline-block;
+		padding-left: 20px;
+		margin-bottom: 0;
+		font-weight: 400;
+		vertical-align: middle;
+		cursor: pointer;
+	}
+	
+	.radio-inline input[type=radio] {
+		margin-left: 15px;
+	}
+	
+	.form-group {
+		margin-bottom: 1.5rem;
+	}
+	
+	label {
+		display: inline-block;
+		margin-bottom: 0.5rem;
+		font-size: 18px;
+		letter-spacing: 0.5px;
+	}
+	
+	.theme-input-style {
+		border: 1px solid #e0e0e0;
+		height: 50px;
+		width: 100%;
+		padding: 0 20px;
+	}
+	
+	.form-container {
+		box-shadow: 0 5px 40px rgb(0 0 0 / 5%);
+		border-top: 10px solid #071630;
+	}
+	
+	input[type="number"]::-webkit-outer-spin-button,
+	input[type="number"]::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+	
+	input[type="number"] {
+		-moz-appearance: textfield;
+	}
+	
+	.asterisk {
+		color: red;
+		margin-left: 3px;
+	}
+	
+	.klaviyo_header {
+		font-size: 50px;
+	}
+	
+	#email-error {
+		color: red;
+		font-size: 15px;
+		font-weight: normal;
+		padding-top: 5px;
+	}
+	
+	.donthide {
+		opacity: 1 !important;
+		visibility: visible;
+		display: block !important;
+	}
+	
+	.telephone {
+		font-size: 1.5rem;
+		text-decoration: none !important;
+		color: #F5812A;
+	}
+	
+	.telephone:hover {
+		color: #F5812A !important;
+	}
+	
+	.radio-img {
+		width: 180px;
+		height: 180px;
+		padding: 20px;
+		cursor: pointer;
+	}
+	
+	.shadow-box {
+		box-shadow: 0 0px 25px 4px #d5d5d5 !important;
+		position: relative !important;
+		display: inline-block;
+		border-style: solid !important;
+		border-width: 0px !important;
+		border-color: rgba(0, 0, 0, 0) !important;
+		background-color: rgba(0, 0, 0, 0) !important;
+		transition: border 0.3s ease !important;
+		background: rgb(255, 255, 255) !important;
+		width: 250px;
+		height: 200px;
+	}
+	
+	.radioSize {
+		width: 100%;
+		height: 5.5em;
+	}
+	
+	.radioSize2 {
+		width: 100%;
+		height: 6.5em;
+	}
+	
+	.hide-radio {
+		top: 15%;
+		left: 13%;
+		opacity: 0;
+		cursor: pointer;
+	}
+	
+	.hide-radio2 {
+		top: 8%;
+		left: 9%;
+		opacity: 1;
+		cursor: pointer;
+	}
+	/*[type=radio] {*/
+	/* position: absolute;*/
+	/* opacity: 1;*/
+	/*}*/
+	
+	[type=radio]+img,
+	[type=radio]+h2 {
+		cursor: pointer;
+	}
+	
+	.label-text {
+		font-size: 22px;
+		font-weight: bold;
+	}
+	
+	#msform .action-button {
+		float: none;
+	}
+	
+	.container-box {
+		display: flex;
+	}
+	
+	@media only screen and (max-width:768px) {
+		.container-box {
+			display: block;
+		}
+	}
+	
+	.shadow-box + input[type=radio] {
+		cursor: pointer;
+	}
+	
+	input[type=radio]:checked + .radio-img {
+		background-color: #f6b17d;
+	}
+	
+	input[type=radio]:checked + .radio-h2 {
+		background-color: #f6b17d;
+	}
+	/*input[type=radio]:checked + .box {*/
+	/* color: white;*/
+	/* transform: translateY(70px);*/
+	/*}*/
+	/*.middle input[type=radio]:checked + .box span:before {*/
+	/* transform: translateY(0px);*/
+	/* opacity: 1;*/
+	/*}*/
+	/*.middle .box {*/
+	/* width: 200px;*/
+	/* height: 200px;*/
+	/* background-color: #fff;*/
+	/* transition: all 250ms ease;*/
+	/* will-change: transition;*/
+	/* display: inline-block;*/
+	/* text-align: center;*/
+	/* cursor: pointer;*/
+	/* position: relative;*/
+	/* font-family: "Inter", sans-serif;*/
+	/* font-weight: 900;*/
+	/*}*/
+	
+	.form-check .radio-img:active {
+		transform: translateY(10px);
+	}
+	
+	.form-check .radio-img {
+		left: 0;
+		right: 0;
+		transition: all 300ms ease;
+		user-select: none;
+	}
+	
+	.form-check .radio-img:before {
+		font-size: 1.2em;
+		font-family: FontAwesome;
+		display: block;
+		transform: translateY(-80px);
+		opacity: 0;
+		transition: all 300ms ease-in-out;
+		font-weight: normal;
+		color: white;
+	}
+	
+	input[type=radio]:not(:disabled) ~ .box {
+		cursor: pointer;
+	}
+	
+	input[type=radio]:checked + .box:before {
+		color: #3d3f43;
+		font-family: FontAwesome;
+		border: 2px solid #00c2c3;
+		content: "\f00c";
+		font-size: 24px;
+		position: absolute;
+		top: -20px;
+		left: 50%;
+		transform: translateX(-50%);
+		height: 40px;
+		width: 40px;
+		line-height: 40px;
+		text-align: center;
+		border-radius: 50%;
+		background: white;
+		box-shadow: 0px 2px 5px -2px rgb(0 0 0 / 25%);
+	}
+	
+	input[type=radio]:checked + .box:after {
+		color: #3d3f43;
+		font-family: FontAwesome;
+		border: 2px solid #00c2c3;
+		content: "\f00c";
+		font-size: 24px;
+		position: absolute;
+		top: -20px;
+		left: 50%;
+		transform: translateX(-50%);
+		height: 40px;
+		width: 40px;
+		line-height: 40px;
+		text-align: center;
+		border-radius: 50%;
+		background: white;
+		box-shadow: 0px 2px 5px -2px rgb(0 0 0 / 25%);
+	}
+	</style>
+</head>
+
+<body>
+	<header id="header" class="fixed-top">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<a class="navbar-brand" href="#"><img src=https://www.amzonestep.com/images/logo.png class="logo" height=70px></a>
+			<button class="navbar-toggler" type=button data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item px-3 py-3"><a href="tel:1888 310 0066" class="telephone"><i class="fas fa-phone-alt"></i> +1888 310 0066</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	<section class="py-4">
+		<div class="container">
+			<div class="row py-4 padding-para">
+				<div class="col-lg-12">
+					<h2 class="h2 text-center">Qualify for your FREE audit!</h2>
+					<h3 class="text-orange text-center bold">(only takes 10 seconds)</h3></div>
+			</div>
+		</div>
+	</section>
+	<div class="container form-container mb-5">
+		<div class="row justify-content-center">
+			<div class="col-lg-10 text-center p-0 mt-3 mb-2">
+				<div class="card px-4 pt-4 pb-0 mb-3">
+					<form data-ajax-submit="//manage.kmail-lists.com/ajax/subscriptions/subscribe" id="msform" name=myForm class="registration-form klaviyo_default_styling klaviyo_gdpr_embed_SrKr4c" novalidate="novalidate">
+						<input type=hidden name=g value="SrKr4c">
+						<input type=hidden name=$fields value="field1,field2,field3,field4,field6">
+						<input type=hidden name=$list_fields value="field1,field2,field3,field4,field6">
+						<input type=hidden name=_token value="j7BTwGjmRvFUUCeMnIKluZjoxqPDzsg06zAZIhAv">
+						<div class="progress">
+							<div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+						</div>
+						<br>
+						<fieldset class="stepstohide my-5">
+							<div class="form-card">
+								<div class="row text-center justify-content-center">
+									<div class="form-group">
+										<label class="text-center label-text">Why are you looking for PPC Services?</label>
+										<div class="container-box py-4 text-center justify-content-center">
+											<div class="form-check">
+												<label class="form-check-label text-center" for="field1">
+													<div class="shadow-box">
+														<input class="form-check-input radioSize hide-radio" type=radio name=field1 id="field1" required="required" value="Profit">
+														<div class="box"><img src=https://www.amzonestep.com/new/img/ppc-profit.png class="img-responsive mt-3 radio-img"></div>
+													</div>
+													<h4 class="py-3">For Profit</h4></label>
+											</div>
+											<div class="form-check">
+												<label class="form-check-label text-center" for="field1">
+													<div class="shadow-box">
+														<input class="form-check-input radioSize hide-radio" type=radio name=field1 id="field1" required="required" value="Scale">
+														<div class="box"><img src=https://www.amzonestep.com/new/img/ppc-scale.png class="img-responsive mt-3 radio-img"></div>
+													</div>
+													<h4 class="py-3">To Scale</h4></label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<p id="failure1" style="display: none;color: red;">Please fill all the fields!</p>
+							<input type=button name=next class="next text-center action-button" id="next1" value="Next">
+						</fieldset>
+						<fieldset class="stepstohide my-5">
+							<div class="form-card">
+								<div class="row text-center justify-content-center">
+									<div class="form-group">
+										<label class="text-center label-text">How much you spend on PPC?</label>
+										<div class="container-box py-4 text-center justify-content-center">
+											<div class="form-check">
+												<label class="form-check-label text-center" for="field2">
+													<div class="shadow-box align-middle" style="padding: 60px 20px 60px 20px;">
+														<input class="form-check-input radioSize2 hide-radio" type=radio name=field2 id="field2" required="required" value="$1000- $5000">
+														<div class="box">
+															<h2 class="radio-h2 text-orange bold">$1000 - $5000</h2></div>
+													</div>
+												</label>
+											</div>
+											<div class="form-check">
+												<label class="form-check-label text-center" for="field2">
+													<div class="shadow-box align-middle" style="padding: 60px 20px 60px 20px;">
+														<input class="form-check-input radioSize2 hide-radio" type=radio name=field2 id="field2" required="required" value="$6000 - $10000">
+														<div class="box">
+															<h2 class="radio-h2 text-orange bold">$6000 - $10000</h2></div>
+													</div>
+												</label>
+											</div>
+											<div class="form-check">
+												<label class="form-check-label text-center" for="field2">
+													<div class="shadow-box align-middle" style="padding: 60px 20px 60px 20px;">
+														<input class="form-check-input radioSize2 hide-radio" type=radio name=field2 id="field2" required="required" value="$10000- $100000">
+														<div class="box">
+															<h2 class="radio-h2 text-orange bold">$10000 - $100000</h2></div>
+													</div>
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<p id="failure2" style="display: none;color: red;">Please fill all the fields!</p>
+							<input type=button name=previous class="previous text-center action-button-previous" value="Previous">
+							<input type=button name=next class="next text-center action-button" id="next2" value="Next">
+						</fieldset>
+						<fieldset class="stepstohide my-3">
+							<div class="klaviyo_field_group klaviyo_form_actions">
+								<div class="klaviyo_field_group">
+									<div class="form-card">
+										<div class="form-group">
+											<div class="klaviyo_helptext">
+												<label>First Name<span class="asterisk">*</span></label>
+											</div>
+											<div class="form-check py-2 mb-4 pl-0">
+												<input type=text class="theme-input-style" placeholder="Your First Name" name=field3 id="field3">
+											</div>
+										</div>
+										<div class="form-group">
+											<label>Last Name<span class="asterisk">*</span></label>
+											<div class="form-check py-2 mb-4 pl-0">
+												<input type=text class="theme-input-style" placeholder="Your Last Name" name=field4 id="field4" required>
+											</div>
+										</div>
+										<div class="form-group">
+											<label>Email<span class="asterisk">*</span></label>
+											<div class="form-check py-2 mb-4 pl-0">
+												<input type=text class="theme-input-style" placeholder="Your Email" name=email id="email">
+												<p id="result" style="display: none;color: red;">You have entered an invalid email address!</p>
+											</div>
+										</div>
+										<div class="form-group">
+											<label>Phone No.<span class="asterisk">*</span></label>
+											<div class="form-check py-2 mb-4 pl-0">
+												<input type=number class="theme-input-style" placeholder="Your Phone Number" name=field6 id="field6" required>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<p id="failure3" style="display: none;color: red;">Please fill all the fields!</p>
+							<input type=button name=previous class="previous text-center action-button-previous" value="Previous">
+							<button type=submit id="submitBtn" name=btn_submit class="klaviyo_submit_button text-center next action-button">Submit</button>
+						</fieldset>
+					</form>
+					<script type=text/javascript src=//www.klaviyo.com/media/js/public/klaviyo_subscribe.js></script>
+					<script>
+					KlaviyoSubscribe.attachToForms('#msform', {
+						hide_form_on_success: true,
+						success: function($form) {
+							$.ajax({
+								url: "https://www.amzonestep.com/calendly-ppc",
+								type: "get",
+								data: $("#msform").serialize(),
+								cache: false,
+								headers: {
+									'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+								},
+								success: function(res) {
+									$('#submitBtn').attr('disabled', 'disabled');
+									window.location.replace("https://www.amzonestep.com/calendly-ppc");
+								}
+							});
+						}
+					});
+					</script>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer class="page-footer justify-content-center text-center py-4"><img src=https://www.amzonestep.com/images/logo.png class="logoResize" alt="logo">
+		<br>
+		<div class="container">
+			<p class="footerPara">AMZ One Step has been in the online service since 2014 with a group of experienced e-commerce experts having an astute understanding of the online business framework’s dependence on quality-driven listing creation and optimization. In a highly competitive market like Amazon, product visibility determines the market share and if your listing is not enticing to the customer, it will not be able to compete. Keeping all this in mind, we hold ourselves to a high standard and are committed to delivering on our mission. </p>
+		</div>
+	</footer>
+	<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src=https://www.amzonestep.com/new/js/bootstrap.bundle.min.js></script>
+	<link rel="stylesheet" type=text/css href="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/css/inputmask.min.css">
+	<script type=text/javascript src=https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/jquery.inputmask.bundle.min.js></script>
+	<script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.3.0/jquery.form.min.js></script>
+	<script>
+	jQuery(document).ready(function($) {
+		var current_fs;
+		var next_fs;
+		var previous_fs;
+		var opacity;
+		var current = 1;
+		var steps = $("fieldset").length;
+		setProgressBar(current);
+		$("#next1").click(function() {
+			if(!$("input[name='field1']:checked").val()) {
+				$("#failure1").show(200);
+				$("#failure1").fadeOut(1500);
+				return false;
+			}
+			current_fs = $(this).parent();
+			next_fs = $(this).parent().next();
+			$("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+			next_fs.show();
+			current_fs.animate({
+				opacity: 0
+			}, {
+				step: function(now) {
+					opacity = 1 - now;
+					current_fs.css({
+						'display': 'none',
+						'position': 'relative'
+					});
+					next_fs.css({
+						'opacity': opacity
+					});
+				},
+				duration: 500
+			});
+			setProgressBar(++current);
+		});
+		$("#next2").click(function() {
+			if(!$("input[name='field2']:checked").val()) {
+				$("#failure2").show(200);
+				$("#failure2").fadeOut(1500);
+				return false;
+			}
+			current_fs = $(this).parent();
+			next_fs = $(this).parent().next();
+			$("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+			next_fs.show();
+			current_fs.animate({
+				opacity: 0
+			}, {
+				step: function(now) {
+					opacity = 1 - now;
+					current_fs.css({
+						'display': 'none',
+						'position': 'relative'
+					});
+					next_fs.css({
+						'opacity': opacity
+					});
+				},
+				duration: 500
+			});
+			setProgressBar(++current);
+		});
+		$("#submitBtn").click(function() {
+			if(!$("input[name='field3']:input").val()) {
+				$("#failure3").show(200);
+				$("#failure3").fadeOut(1500);
+				return false;
+			} else if(!$("input[name='field4']:input").val()) {
+				$("#failure3").show(200);
+				$("#failure3").fadeOut(1500);
+				return false;
+			} else if(!$("input[name='email']:input").val()) {
+				Inputmask("*{1,20}[.*{1,20}][.*{1,20}][.*{1,20}]@*{1,20}[.*{2,6}][.*{1,2}]", {
+					placeholder: "-",
+					greedy: false,
+					required: true
+				}).mask('#email');
+				$("#failure3").show(200);
+				$("#failure3").fadeOut(1500);
+				return false;
+			} else if(!$("input[name='field6']:input").val()) {
+				$("#failure3").show(200);
+				$("#failure3").fadeOut(1500);
+				return false;
+			}
+			current_fs = $(this).parent();
+			next_fs = $(this).parent().next();
+			$("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+			next_fs.show();
+			current_fs.animate({
+				opacity: 0
+			}, {
+				step: function(now) {
+					opacity = 1 - now;
+					current_fs.css({
+						'display': 'none',
+						'position': 'relative'
+					});
+					next_fs.css({
+						'opacity': opacity
+					});
+				},
+				duration: 500
+			});
+			setProgressBar(++current);
+		});
+		$(".previous").click(function() {
+			current_fs = $(this).parent();
+			previous_fs = $(this).parent().prev();
+			$("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+			previous_fs.show();
+			current_fs.animate({
+				opacity: 0
+			}, {
+				step: function(now) {
+					opacity = 1 - now;
+					current_fs.css({
+						'display': 'none',
+						'position': 'relative'
+					});
+					previous_fs.css({
+						'opacity': opacity
+					});
+				},
+				duration: 500
+			});
+			setProgressBar(--current);
+		});
+
+		function setProgressBar(curStep) {
+			var percent = parseFloat(100 / steps) * curStep;
+			percent = percent.toFixed();
+			$(".progress-bar").css("width", percent + "%");
+		}
+		$(".submit").click(function() {
+			return false;
+		});
+	});
+	</script>
+	<script>
+	window.onscroll = function() {
+		scrollFunction()
+	};
+
+	function scrollFunction() {
+		if(document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+			document.getElementById("header").style.backgroundColor = "black";
+		} else {
+			document.getElementById("header").style.backgroundColor = "black";
+		}
+	}
+	</script>
+</body>
+
+</html>
